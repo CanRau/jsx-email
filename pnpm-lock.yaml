@@ -235,9 +235,6 @@ importers:
       pretty-bytes:
         specifier: ^5.6.0
         version: 5.6.0
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
@@ -320,6 +317,9 @@ importers:
       hast:
         specifier: ^1.0.0
         version: 1.0.0
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
 
 packages:
 
@@ -5496,7 +5496,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /loupe@2.3.6:
     resolution: {integrity: sha512-RaPMZKiMy8/JruncMU5Bt6na1eftNoo++R4Y+N2FrxkDVTrGvcyzFTsaGif4QTeKESheMGegbhw6iUAq+5A8zA==}
@@ -6480,7 +6479,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}

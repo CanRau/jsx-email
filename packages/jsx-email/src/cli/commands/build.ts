@@ -121,6 +121,7 @@ const compile = async (files: string[], outDir: string) => {
   await esbuild.build({
     bundle: true,
     entryPoints: files,
+    external: ['jsx-email', 'react'],
     logLevel: 'error',
     outdir: outDir,
     platform: 'node',
