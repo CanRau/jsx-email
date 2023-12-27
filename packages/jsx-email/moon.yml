@@ -70,6 +70,12 @@ tasks:
       outputStyle: 'stream'
       runDepsInParallel: false
 
+  rollup:
+    command: rollup --config rollup.config.js
+    options:
+      cache: false
+      outputStyle: 'stream'
+
   start.preview:
     command: ts-node --swc --project ../../tsconfig.json scripts/test.ts
     options:

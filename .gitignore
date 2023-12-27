@@ -5,6 +5,7 @@
 .rendered
 node_modules
 dist
+out
 .DS_Store
 .pnpm-debug.log*
 .env
