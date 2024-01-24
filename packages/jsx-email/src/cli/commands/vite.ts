@@ -40,7 +40,11 @@ export const viteConfig = defineConfig({
     // `envDefine` are replaced with an `import.meta.env` prefix, and thus don't work
     ...envDefine
   },
+  esbuild: {
+    exclude: ['find-up-simple', 'package-config']
+  },
   optimizeDeps: {
+    exclude: ['find-up-simple', 'package-config'],
     // Note: These are all CommonJS dependencies that don't implement an ESM compatible exports
     // strategy. Any packages which throws "does not provide an export named 'default'" needs to go
     // here.
@@ -64,6 +68,7 @@ export const viteConfig = defineConfig({
     hypothetical({
       allowFallthrough: true,
       files: {
+        'package-config/': `export default {};`,
         'rehype-preset-minify/': `export default {};`
       }
     }),
