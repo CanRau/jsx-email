@@ -1,3 +1,4 @@
+import { config } from '../config';
 import { debug } from '../debug';
 import type { BaseProps, JsxEmailComponent } from '../types';
 
@@ -5,7 +6,11 @@ export interface HrProps extends BaseProps<'hr'> {}
 
 const debugProps = debug.elements.enabled ? { dataType: 'jsx-email/hr' } : {};
 
-export const Hr: JsxEmailComponent<HrProps> = ({ disableDefaultStyle, style, ...props }) => (
+export const Hr: JsxEmailComponent<HrProps> = ({
+  disableDefaultStyle = config.disableDefaultStyles,
+  style,
+  ...props
+}) => (
   <hr
     {...props}
     {...debugProps}

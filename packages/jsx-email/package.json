@@ -68,6 +68,7 @@
     "md-to-react-email": "5.0.0",
     "mustache": "^4.2.0",
     "p-memoize": "4.0.4",
+    "package-config": "^5.0.0",
     "postcss": "^8.4.32",
     "postcss-var-replace": "^1.0.0",
     "pretty": "2.0.0",
@@ -94,8 +95,7 @@
     "@types/import-local": "^3.1.2",
     "@types/pretty": "^2.0.1",
     "@types/source-map-support": "^0.5.10",
-    "@types/yargs-parser": "^21.0.3",
-    "hast": "^1.0.0"
+    "@types/yargs-parser": "^21.0.3"
   },
   "types": "dist/index.d.mts",
   "bump": "0",

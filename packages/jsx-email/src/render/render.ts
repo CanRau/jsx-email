@@ -1,5 +1,6 @@
 import { htmlToText } from 'html-to-text';
 
+import { loadConfig } from '../config';
 import type { PlainTextOptions, RenderOptions } from '../types';
 
 import { jsxToString } from './jsx-to-string';
@@ -9,7 +10,10 @@ export const renderPlainText = async (
   component: React.ReactElement,
   options?: PlainTextOptions
 ) => {
+  await loadConfig();
+
   const result = await jsxToString(component);
+
   return htmlToText(result, {
     selectors: [
       { format: 'skip', selector: 'img' },
@@ -22,6 +26,8 @@ export const renderPlainText = async (
 
 export const render = async (component: React.ReactElement, options?: RenderOptions) => {
   const { minify = false, plainText, pretty = false } = options || {};
+
+  await loadConfig();
 
   if (plainText) return renderPlainText(component, typeof plainText === 'object' ? plainText : {});
 

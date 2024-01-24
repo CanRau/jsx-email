@@ -1,3 +1,4 @@
+import { config } from '../config';
 import { debug } from '../debug';
 import type { BaseProps, JsxEmailComponent } from '../types';
 
@@ -8,7 +9,7 @@ export interface LinkProps extends RootProps {}
 const debugProps = debug.elements.enabled ? { dataType: 'jsx-email/link' } : {};
 
 export const Link: JsxEmailComponent<LinkProps> = ({
-  disableDefaultStyle,
+  disableDefaultStyle = config.disableDefaultStyles,
   style,
   target,
   ...props

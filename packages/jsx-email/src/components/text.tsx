@@ -1,3 +1,4 @@
+import { config } from '../config';
 import { debug } from '../debug';
 import type { BaseProps, JsxEmailComponent } from '../types';
 
@@ -5,7 +6,11 @@ export interface TextProps extends BaseProps<'p'> {}
 
 const debugProps = debug.elements.enabled ? { dataType: 'jsx-email/text' } : {};
 
-export const Text: JsxEmailComponent<TextProps> = ({ disableDefaultStyle, style, ...props }) => (
+export const Text: JsxEmailComponent<TextProps> = ({
+  disableDefaultStyle = config.disableDefaultStyles,
+  style,
+  ...props
+}) => (
   <p
     {...props}
     {...debugProps}

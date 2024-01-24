@@ -1,3 +1,4 @@
+import { config } from '../config';
 import { debug } from '../debug';
 import type { BaseProps, JsxEmailComponent } from '../types';
 
@@ -7,7 +8,7 @@ const debugProps = debug.elements.enabled ? { dataType: 'jsx-email/img' } : {};
 
 export const Img: JsxEmailComponent<ImgProps> = ({
   alt,
-  disableDefaultStyle,
+  disableDefaultStyle = config.disableDefaultStyles,
   height,
   src,
   style,
