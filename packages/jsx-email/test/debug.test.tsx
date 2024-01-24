@@ -1,3 +1,7 @@
+// @ts-ignore
+// Note: not sure why we need this for this test, but we do
+import * as React from 'react';
+
 import { d, debug } from '../src/debug';
 import { render } from '../src/render';
 

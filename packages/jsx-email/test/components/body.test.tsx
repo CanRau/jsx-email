@@ -1,8 +1,8 @@
 // @ts-ignore
 import React from 'react';
 
-import { jsxToString } from '../src/render';
-import { Body } from '../src';
+import { jsxToString } from '../../src/render';
+import { Body } from '../../src';
 
 describe('render', async () => {
   beforeEach(() => {

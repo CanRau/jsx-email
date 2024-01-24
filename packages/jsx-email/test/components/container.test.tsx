@@ -1,8 +1,8 @@
 // @ts-ignore
 import React from 'react';
 
-import { jsxToString } from '../src/render';
-import { Container } from '../src';
+import { jsxToString } from '../../src/render';
+import { Container } from '../../src';
 
 describe('<Container> component', async () => {
   beforeEach(() => {

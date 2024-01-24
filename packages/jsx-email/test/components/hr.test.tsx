@@ -1,8 +1,8 @@
 // @ts-ignore
 import React from 'react';
 
-import { jsxToString } from '../src/render';
-import { Hr } from '../src';
+import { jsxToString } from '../../src/render';
+import { Hr } from '../../src';
 
 describe('<Hr> component', () => {
   beforeEach(() => {

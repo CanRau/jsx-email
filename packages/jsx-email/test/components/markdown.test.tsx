@@ -2,8 +2,8 @@
 // @ts-ignore
 import React from 'react';
 
-import { jsxToString } from '../src/render';
-import { Markdown } from '../src';
+import { jsxToString } from '../../src/render';
+import { Markdown } from '../../src';
 
 describe('<Markdown> component renders correctly', async () => {
   it('renders the markdown in the correct format for browsers', async () => {

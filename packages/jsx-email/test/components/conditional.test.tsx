@@ -1,8 +1,8 @@
 // @ts-ignore
 import React from 'react';
 
-import { jsxToString, render } from '../src/render';
-import { Conditional } from '../dist';
+import { jsxToString, render } from '../../src/render';
+import { Conditional } from '../../dist';
 
 describe('<Conditional> component', async () => {
   beforeEach(() => {

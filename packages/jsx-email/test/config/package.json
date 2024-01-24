@@ -1,0 +1,8 @@
+{
+  "name": "config-test",
+  "version": "0.0.0",
+  "private": true,
+  "jsx-email": {
+    "disableDefaultStyles": true
+  }
+}

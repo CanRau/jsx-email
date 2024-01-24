@@ -1,10 +1,10 @@
 // @ts-ignore
 import React from 'react';
 
-import { jsxToString } from '../src/render';
-import { Row } from '../src';
+import { jsxToString } from '../../src/render';
+import { Column } from '../../src';
 
-describe('<Row> component', async () => {
+describe('<Column> component', () => {
   beforeEach(() => {
     vi.restoreAllMocks();
     vi.resetModules();
@@ -12,23 +12,22 @@ describe('<Row> component', async () => {
 
   it('renders children correctly', async () => {
     const testMessage = 'Test message';
-    const html = await jsxToString(<Row>{testMessage}</Row>);
-    expect(html).toContain(testMessage);
+    const html = await jsxToString(<Column>{testMessage}</Column>);
+    expect(html).toMatchSnapshot();
   });
 
   it('passes style and other props correctly', async () => {
     const style = { backgroundColor: 'red' };
     const html = await jsxToString(
-      <Row style={style} data-testid="row-test">
+      <Column style={style} data-testid="column-test">
         Test
-      </Row>
+      </Column>
     );
-    expect(html).toContain('style="background-color:red"');
-    expect(html).toContain('data-testid="row-test"');
+    expect(html).toMatchSnapshot();
   });
 
   it('renders correctly', async () => {
-    const actualOutput = await jsxToString(<Row children={undefined} />);
+    const actualOutput = await jsxToString(<Column>Lorem ipsum</Column>);
     expect(actualOutput).toMatchSnapshot();
   });
 });

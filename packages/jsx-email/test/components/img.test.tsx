@@ -1,8 +1,8 @@
 // @ts-ignore
 import React from 'react';
 
-import { jsxToString } from '../src/render';
-import { Img } from '../src';
+import { jsxToString } from '../../src/render';
+import { Img } from '../../src';
 
 describe('<Img> component', async () => {
   beforeEach(() => {
